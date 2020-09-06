@@ -3,6 +3,11 @@ Fast GeoJSON file import into MongoDB using Python
 
 The standard mongoimport tool provided with MongoDB does not recognize GeoJSON files without first editing them manually or running them through a script.  Using this Python program instead of mongoimort takes care of that.  It is assumed that the GeoJSON features will be inserted as individual documents within the target collection.  The other assumption is that your import file is well-formed GeoJSON consisting of a FeatureCollection. This script should work with most standard geometry types supported in MongoDB, including Point, LineString, Polygon, along their respective multipart equivalents, such as MultiPolygon.   
 
+You can do the following:
+
+`python3 -m venv /path/to/directory`
+`. /path/to/directory/bin/activate`
+
 Before running ensure you have the PyMongo module installed:
 
 `pip install pymongo`
