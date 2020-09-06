@@ -6,6 +6,8 @@ The standard mongoimport tool provided with MongoDB does not recognize GeoJSON f
 Before running ensure you have the PyMongo module installed:
 
 `pip install pymongo`
+or 
+`pip install -r requirements.txt`
 
 Example usage:
 
