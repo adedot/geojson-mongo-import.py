@@ -11,6 +11,8 @@ Example usage:
 
 `python geojson-mongo-import.py -f points.geojson -d geospatial -c points`
 
+with geospatial as the the database and points as the collection
+
 Given an input file named "points.geojson" having GeoJSON points and destination collection named "points" in the "geospatial" database.  This repo includes a sample "points.geojson" file which is a FeatureCollection of points and a couple of properties including a timestamp.
 
 Additional parameters are required if your server is not on your local machine or if your database requires authentication.  Use the "--help" flag or see the example below.
@@ -21,7 +23,7 @@ This script uses bulk write operations which results in nearly a 10x performance
 
 Along with importing the GeoJSON file, this script also creates a MongoDB [2dsphere](https://docs.mongodb.com/manual/core/2dsphere/) geospatial index on the collection (if the named index does not exist).  It also creates the named database and collection if they do not exist (and the user has permission to do so).
 
-Script requires MongoDB 3.2 or higher (prior releases do not support bulk operations), and was developed using Python 2.7 and a MongoDB 3.4 server.
+Script requires MongoDB 3.2 or higher (prior releases do not support bulk operations), and was developed using Python 3.7.3 and a MongoDB 4.4 server.
 
 
 
